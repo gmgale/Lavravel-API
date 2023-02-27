@@ -3,6 +3,7 @@
 /** @var \Laravel\Lumen\Routing\Router $router */
 
 use Illuminate\Http\Response;
+use OpenApi\Annotations as OA;
 
 /*
 |--------------------------------------------------------------------------

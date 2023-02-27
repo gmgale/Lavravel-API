@@ -1,5 +1,7 @@
 <?php
 
+use OpenApi\Annotations as OA;
+
 /**
  * @OA\Info(
  *     title="Specto",
