@@ -16,3 +16,19 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+/*
+| Post routes
+*/
+$router->group([], function () use ($router) {
+
+
+    $router->get('post', function (){
+        return 'All posts';
+    });
+
+    $router->get('post/{id}', function ($id) {
+        return $id;
+    });
+});
+
