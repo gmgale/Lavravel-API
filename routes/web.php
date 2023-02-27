@@ -25,7 +25,6 @@ $router->get('/', function () use ($router) {
 | Post routes
 */
 $router->group([], function () use ($router) {
-
     /**
      * @OA\Get(
      *     path="/api/posts",
@@ -33,7 +32,6 @@ $router->group([], function () use ($router) {
      * )
      */
     $router->get('/api/posts', function () {
-
         $posts = Cache::get('1', function () {
             $posts = DB::select("SELECT * FROM posts");
             Cache::add('1', $posts, $seconds = env('CACHE_TIME'));
@@ -48,7 +46,6 @@ $router->group([], function () use ($router) {
      * )
      */
     $router->get('api/post/{id}', function ($id) {
-
         $post = Cache::get($id);
         if ($post == null) {
             $post = DB::table('posts')->where('id', $id)->first();
