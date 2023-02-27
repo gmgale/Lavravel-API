@@ -126,4 +126,12 @@ Write simple tests to test APIs above (test successful response)
 ```
 vendor/bin/sail phpunit
 ```
-# Lavravel-API
+
+<hr />
+
+## Notes
+
+Fix code to PSR2 standards with 
+```
+PHP_CS_FIXER_IGNORE_ENV=true tools/php-cs-fixer/vendor/bin/php-cs-fixer fix .  
+```
