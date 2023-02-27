@@ -14,6 +14,7 @@ services:
         environment:
             WWWUSER: '${WWWUSER}'
             LARAVEL_SAIL: 1
+            CACHE_TIME: '${CACHE_TIME}'
         volumes:
             - '.:/var/www/html'
         networks:
@@ -41,6 +42,7 @@ services:
     redis:
         container_name: specto_redis
         image: 'redis:alpine'
+        
         ports:
             - '${FORWARD_REDIS_PORT:-6379}:6379'
         volumes:
