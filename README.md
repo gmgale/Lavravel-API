@@ -133,5 +133,5 @@ vendor/bin/sail phpunit
 
 Fix code to PSR2 standards with 
 ```
-PHP_CS_FIXER_IGNORE_ENV=true tools/php-cs-fixer/vendor/bin/php-cs-fixer fix .  
+PHP_CS_FIXER_IGNORE_ENV=true tools/php-cs-fixer/vendor/bin/php-cs-fixer fix . --rules@PSR2 
 ```
