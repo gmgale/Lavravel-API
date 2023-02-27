@@ -99,7 +99,7 @@ api/posts
 
 GET: (get specific one)
 
-api/posts/{id}
+api/post/{id}
 
 ## OpenApi (Swagger)
 
