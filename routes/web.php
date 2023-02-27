@@ -2,6 +2,8 @@
 
 /** @var \Laravel\Lumen\Routing\Router $router */
 
+use Illuminate\Http\Response;
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -21,14 +23,25 @@ $router->get('/', function () use ($router) {
 | Post routes
 */
 $router->group([], function () use ($router) {
-
-
-    $router->get('post', function (){
-        return 'All posts';
+    /**
+     * @OA\Get(
+     *     path="/api/posts",
+     *     @OA\Response(response="200", description="Get all posts.")
+     * )
+     */
+    $router->get('api/posts', function () {
+        $posts = DB::select("SELECT * FROM posts");
+        return response()->json($posts);
     });
 
-    $router->get('post/{id}', function ($id) {
-        return $id;
+    /**
+     * @OA\Get(
+     *     path="/api/post/'{id}",
+     *     @OA\Response(response="200", description="Get a post by it's id.")
+     * )
+     */
+    $router->get('api/post/{id}', function ($id) {
+        $post = DB::table('posts')->where('id', $id)->first();
+        return response()->json([$post->id, $post->title, $post->description]);
     });
 });
-
