@@ -117,7 +117,7 @@ http://localhost:8080/api/documentation
 
 ## Cache DB queries
 
-Use Redis to cache DB queries for x minutes
+Use Redis to cache DB queries for x minutes. Define x in .env file
 
 ## Tests
 
