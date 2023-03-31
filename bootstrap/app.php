@@ -98,7 +98,7 @@ $app->configure('cache');
 // $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
 if (class_exists(\Devgowa\LumenServe\CommandServeServiceProvider::class)) {
-    $app->register(\Devgowa\LumenServeJOKE\CommandServeServiceProvider::class); // "\Devgowa\LumenServeJOKE\" does not exist. Remove 'JOKE' to make it work//
+    $app->register(\Devgowa\LumenServe\CommandServeServiceProvider::class);
 }
 if (class_exists(\SwaggerLume\ServiceProvider::class)) {
     $app->register(\SwaggerLume\ServiceProvider::class);
